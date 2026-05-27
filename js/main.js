@@ -79,17 +79,63 @@ if (showMoreBtn) {
   });
 }
 
-/* ── Active Nav Link on Scroll ───────────────────────────────── */
-const sections = document.querySelectorAll('section[id]');
-const navLinkEls = document.querySelectorAll('.nav-links a');
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      const id = e.target.id;
-      navLinkEls.forEach(a => {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+/* ── Tab Navigation ──────────────────────────────────────────── */
+const tabLinks  = document.querySelectorAll('[data-tab]');
+const tabPanels = document.querySelectorAll('.tab-panel');
+const VALID_TABS = ['home', 'research', 'publications', 'about', 'contact'];
+
+function switchTab(tabId) {
+  if (!VALID_TABS.includes(tabId)) tabId = 'home';
+
+  // Show/hide panels
+  tabPanels.forEach(panel => {
+    panel.classList.toggle('active', panel.id === 'tab-' + tabId);
+  });
+
+  // Update active tab link
+  tabLinks.forEach(link => {
+    link.classList.toggle('active', link.dataset.tab === tabId);
+  });
+
+  // Trigger fade-up for newly visible elements
+  const active = document.getElementById('tab-' + tabId);
+  if (active) {
+    active.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+  }
+
+  // Scroll to top of content
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // Sync URL hash without pushing history
+  history.replaceState(null, '', '#' + tabId);
+}
+
+// Init from URL hash (or default to home)
+switchTab(window.location.hash.slice(1) || 'home');
+
+// Tab clicks
+tabLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    switchTab(link.dataset.tab);
+    if (navLinks) navLinks.classList.remove('open');
+  });
+});
+
+// Handle hero CTA buttons like <a href="#research"> → switch tab
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  if (!a.dataset.tab) {
+    const target = a.getAttribute('href').slice(1);
+    if (VALID_TABS.includes(target)) {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        switchTab(target);
       });
     }
-  });
-}, { rootMargin: '-30% 0px -60% 0px' });
-sections.forEach(s => sectionObserver.observe(s));
+  }
+});
+
+// Browser back/forward
+window.addEventListener('popstate', () => {
+  switchTab(window.location.hash.slice(1) || 'home');
+});

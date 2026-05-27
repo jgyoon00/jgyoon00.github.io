@@ -59,10 +59,11 @@
     </a>
 
     <ul class="nav-links" role="list">
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home" data-tab="home" class="active">Home</a></li>
+      <li><a href="#research" data-tab="research">Research</a></li>
+      <li><a href="#publications" data-tab="publications">Publications</a></li>
+      <li><a href="#about" data-tab="about">About</a></li>
+      <li><a href="#contact" data-tab="contact">Contact</a></li>
       <li>
         <a href="CV-yoon_final_2026_.docx" class="btn btn-outline" style="padding: 6px 16px; font-size: var(--text-xs);">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -84,6 +85,7 @@
 
 <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
 <main>
+<div class="tab-panel active" id="tab-home">
 <section class="hero" aria-label="Introduction">
   <div class="container">
     <div class="hero-grid">
@@ -139,7 +141,7 @@
       <div class="hero-avatar" aria-hidden="true">
         <div class="avatar-ring">
           <div class="avatar-inner">
-            <span class="avatar-placeholder">JY</span>
+            <img src="images/profile.jpg" alt="Jeonggyo Yoon" style="width:100%;height:100%;object-fit:cover;object-position:center top;">
           </div>
         </div>
       </div>
@@ -168,7 +170,10 @@
   </div>
 </div>
 
+</div><!-- /tab-home -->
+
 <!-- ═══ RESEARCH ══════════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-research">
 <section id="research" aria-label="Research">
   <div class="container">
     <div class="section-header">
@@ -224,9 +229,10 @@
   </div>
 </section>
 
-<div class="section-divider"></div>
+</div><!-- /tab-research -->
 
 <!-- ═══ PUBLICATIONS ══════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-publications">
 <section id="publications" aria-label="Publications">
   <div class="container">
     <div class="section-header">
@@ -459,9 +465,10 @@
   </div>
 </section>
 
-<div class="section-divider"></div>
+</div><!-- /tab-publications -->
 
 <!-- ═══ ABOUT ═════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-about">
 <section id="about" aria-label="About">
   <div class="container">
     <div class="section-header">
@@ -519,17 +526,18 @@
   </div>
 </section>
 
-<div class="section-divider"></div>
+</div><!-- /tab-about -->
 
 <!-- ═══ CONTACT ═══════════════════════════════════════════════════ -->
+<div class="tab-panel" id="tab-contact">
 <section id="contact" class="contact-section" aria-label="Contact">
   <div class="container">
     <div class="contact-grid">
       <div class="contact-text">
         <p class="section-kicker">Contact</p>
         <h2 class="section-title">Get in Touch</h2>
-        <p>I welcome inquiries from prospective collaborators, postdoctoral advisors, and colleagues in environmental health and epidemiology. I am on the market for postdoctoral positions beginning 2027.</p>
-        <p>For research collaboration, conference questions, or general inquiries, email is the best way to reach me.</p>
+        <p>I am always glad to connect with researchers working on environmental health, cancer epidemiology, or climate equity — whether for collaboration, feedback on work in progress, or a conversation about shared interests. I will be on the postdoctoral job market beginning in 2027.</p>
+        <p>Email is the best way to reach me.</p>
       </div>
 
       <div>
@@ -587,6 +595,7 @@
     </div>
   </div>
 </section>
+</div><!-- /tab-contact -->
 
 </main>
 
