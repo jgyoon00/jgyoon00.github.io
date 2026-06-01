@@ -656,18 +656,6 @@ section { padding-block: clamp(var(--space-12), 8vw, var(--space-24)); }
 }
 .pub-group-panel[hidden] { display: none !important; }
 
-.show-more-btn {
-  margin-top: var(--space-6);
-  font-size: var(--text-sm); font-weight: 600;
-  color: var(--color-primary);
-  display: flex; align-items: center; gap: var(--space-2);
-  padding: var(--space-3) var(--space-6);
-  border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-full, 9999px);
-  transition: all var(--transition);
-}
-.show-more-btn:hover { border-color: var(--color-primary); background: color-mix(in oklab, var(--color-primary) 6%, transparent); }
-
 /* ── Presentations ────────────────────────────────────────────── */
 .pres-list { display: flex; flex-direction: column; gap: var(--space-5); margin-top: var(--space-8); }
 .pres-item {
