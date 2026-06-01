@@ -51,33 +51,51 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-/* ── Publication Filter ──────────────────────────────────────── */
+/* ── Publication Filter & Groups ─────────────────────────────── */
 const filterBtns = document.querySelectorAll('.filter-btn');
 const pubItems = document.querySelectorAll('.pub-item');
+const hdToggle = document.querySelector('.pub-group-toggle');
+const hdPanel = document.getElementById('pub-group-hd');
+
+function setHdPanelOpen(open) {
+  if (!hdPanel || !hdToggle) return;
+  hdPanel.hidden = !open;
+  hdToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  hdToggle.classList.toggle('is-open', open);
+}
+
+function applyPubFilter(filter) {
+  let hdHasMatch = false;
+
+  pubItems.forEach(item => {
+    const types = item.dataset.type.split(' ');
+    const matches = filter === 'all' || types.includes(filter);
+    if (filter === 'all') {
+      item.style.display = '';
+    } else {
+      item.style.display = matches ? 'block' : 'none';
+      if (matches && item.dataset.group === 'hd') hdHasMatch = true;
+    }
+  });
+
+  if (filter === 'all') {
+    setHdPanelOpen(false);
+  } else {
+    setHdPanelOpen(hdHasMatch);
+  }
+}
+
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    pubItems.forEach(item => {
-      const types = item.dataset.type.split(' ');
-      const matches = filter === 'all' || types.includes(filter);
-      if (filter === 'all') {
-        item.style.display = '';
-      } else {
-        item.style.display = matches ? 'block' : 'none';
-      }
-    });
+    applyPubFilter(btn.dataset.filter);
   });
 });
 
-/* ── Show More Publications ──────────────────────────────────── */
-const showMoreBtn = document.querySelector('.show-more-btn');
-const hiddenPubs = document.querySelectorAll('.pub-list-hidden');
-if (showMoreBtn) {
-  showMoreBtn.addEventListener('click', () => {
-    hiddenPubs.forEach(el => el.classList.remove('pub-list-hidden'));
-    showMoreBtn.style.display = 'none';
+if (hdToggle && hdPanel) {
+  hdToggle.addEventListener('click', () => {
+    setHdPanelOpen(hdPanel.hidden);
   });
 }
 

@@ -315,13 +315,13 @@
     </div>
 
     <div class="pub-filters" role="group" aria-label="Filter publications">
-      <button class="filter-btn active" data-filter="all">All (16 + 2 in prep)</button>
+      <button class="filter-btn active" data-filter="all">All (12 + 2 in prep)</button>
       <button class="filter-btn" data-filter="first">First Author</button>
       <button class="filter-btn" data-filter="english">English</button>
       <button class="filter-btn" data-filter="korean">Korean</button>
     </div>
 
-    <div class="pub-list" role="list">
+    <div class="pub-list">
 
       <!-- In Preparation -->
       <div class="pub-item first-author fade-up" data-type="first english" role="listitem">
@@ -380,8 +380,18 @@
         </div>
       </div>
 
+      <div class="pub-group">
+        <button type="button" class="pub-group-toggle fade-up" aria-expanded="false" aria-controls="pub-group-hd">
+          <span class="pub-group-text">
+            <span class="pub-group-label">Humidifier Disinfectant Research</span>
+            <span class="pub-group-meta">9 publications · earlier work</span>
+          </span>
+          <svg class="pub-group-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="pub-group-panel" id="pub-group-hd" hidden>
+
       <!-- BMC PH 2023 -->
-      <div class="pub-item fade-up" data-type="english" role="listitem">
+      <div class="pub-item fade-up" data-type="english" data-group="hd" role="listitem">
         <div class="pub-meta">
           <span class="pub-year">2023</span>
           <span class="pub-badge badge-en">English</span>
@@ -398,7 +408,7 @@
       </div>
 
       <!-- Toxics 2022 -->
-      <div class="pub-item fade-up pub-list-hidden" data-type="english" role="listitem">
+      <div class="pub-item fade-up" data-type="english" data-group="hd" role="listitem">
         <div class="pub-meta">
           <span class="pub-year">2022</span>
           <span class="pub-badge badge-en">English</span>
@@ -412,7 +422,7 @@
       </div>
 
       <!-- IJERPH 2021 -->
-      <div class="pub-item first-author fade-up pub-list-hidden" data-type="first english" role="listitem">
+      <div class="pub-item first-author fade-up" data-type="first english" data-group="hd" role="listitem">
         <div class="pub-meta">
           <span class="pub-year">2021</span>
           <span class="pub-badge badge-fa">First Author</span>
@@ -427,7 +437,7 @@
       </div>
 
       <!-- BMC PH 2021 -->
-      <div class="pub-item fade-up pub-list-hidden" data-type="english" role="listitem">
+      <div class="pub-item fade-up" data-type="english" data-group="hd" role="listitem">
         <div class="pub-meta">
           <span class="pub-year">2021</span>
           <span class="pub-badge badge-en">English</span>
@@ -441,7 +451,7 @@
       </div>
 
       <!-- JEHS 2021 Korean -->
-      <div class="pub-item fade-up pub-list-hidden" data-type="korean" role="listitem">
+      <div class="pub-item fade-up" data-type="korean" data-group="hd" role="listitem">
         <div class="pub-meta">
           <span class="pub-year">2021</span>
           <span class="pub-badge badge-ko">Korean</span>
@@ -455,7 +465,7 @@
       </div>
 
       <!-- JEHS 2019 Best Paper -->
-      <div class="pub-item fade-up pub-list-hidden" data-type="korean" role="listitem">
+      <div class="pub-item fade-up" data-type="korean" data-group="hd" role="listitem">
         <div class="pub-meta">
           <span class="pub-year">2019</span>
           <span class="pub-badge badge-ko">Korean</span>
@@ -470,7 +480,7 @@
       </div>
 
       <!-- JEHS 2019 -->
-      <div class="pub-item fade-up pub-list-hidden" data-type="korean" role="listitem">
+      <div class="pub-item fade-up" data-type="korean" data-group="hd" role="listitem">
         <div class="pub-meta">
           <span class="pub-year">2019</span>
           <span class="pub-badge badge-ko">Korean</span>
@@ -484,7 +494,7 @@
       </div>
 
       <!-- JEHS 2019 -->
-      <div class="pub-item fade-up pub-list-hidden" data-type="korean" role="listitem">
+      <div class="pub-item fade-up" data-type="korean" data-group="hd" role="listitem">
         <div class="pub-meta">
           <span class="pub-year">2019</span>
           <span class="pub-badge badge-ko">Korean</span>
@@ -498,7 +508,7 @@
       </div>
 
       <!-- JEHS 2018 -->
-      <div class="pub-item fade-up pub-list-hidden" data-type="korean" role="listitem">
+      <div class="pub-item fade-up" data-type="korean" data-group="hd" role="listitem">
         <div class="pub-meta">
           <span class="pub-year">2018</span>
           <span class="pub-badge badge-ko">Korean</span>
@@ -511,8 +521,11 @@
         </div>
       </div>
 
+        </div><!-- /pub-group-panel -->
+      </div><!-- /pub-group -->
+
       <!-- Kinesiology 2017 -->
-      <div class="pub-item first-author fade-up pub-list-hidden" data-type="first korean" role="listitem">
+      <div class="pub-item first-author fade-up" data-type="first korean" role="listitem">
         <div class="pub-meta">
           <span class="pub-year">2017</span>
           <span class="pub-badge badge-fa">First Author</span>
@@ -528,11 +541,6 @@
       </div>
 
     </div><!-- /pub-list -->
-
-    <button class="show-more-btn">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-      Show all publications
-    </button>
 
     <!-- Presentations -->
     <div style="margin-top: var(--space-16);">
