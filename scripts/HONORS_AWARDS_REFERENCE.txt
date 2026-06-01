@@ -1,0 +1,52 @@
+Honors & Awards (removed from website Home strip — kept for CV updates)
+Source: index.html news-strip, archived 2026-06-01
+Also mirrored in: scripts/build_postdoc_cv.py (Honors & Awards section)
+================================================================================
+
+Use this file when editing CV-yoon_postdoc_2026.docx or build_postdoc_cv.py.
+Website shows honors via Publications tab badges only; full list lives on CV.
+
+--------------------------------------------------------------------------------
+Scholarships and Travel Support
+--------------------------------------------------------------------------------
+
+2025   CRTEC Travel Award ($1,500)
+       Cancer Research Training and Education Coordination, University of Arizona
+
+2024   GPSC Travel Award ($1,500)
+       Graduate and Professional Student Council, University of Arizona
+
+2023   Dean's Annual Fund Scholarship ($1,550)
+       Mel and Enid Zuckerman College of Public Health, University of Arizona
+
+2023   CRTEC Travel Award ($1,000)
+       Cancer Research Training and Education Coordination, University of Arizona
+
+--------------------------------------------------------------------------------
+Research and Presentation Awards
+--------------------------------------------------------------------------------
+
+2023   Best Poster Presentation Award, MEZCOPH Public Health Poster Forum (1st Place)
+
+2020   Co-author, 30th Best Science and Technology Paper Award,
+       Korean Federation of Science and Technology Societies (KOSFT)
+
+2018   Best Graduate Student Oral Presentation Award,
+       Korean Society of Environmental Health
+
+2018   Best Poster Presentation Award,
+       Korean Society for Preventive Medicine
+
+2018   Best Professional Field Interviewer Award,
+       Korean Society of Environmental Health
+
+2018   Best Paper Award, The Journal of Kinesiology
+
+2017   Best Poster Presentation Award,
+       Korean Society for Preventive Medicine
+
+--------------------------------------------------------------------------------
+CV-only (not on former website strip)
+--------------------------------------------------------------------------------
+
+Dean's List Scholarship (two semesters), Gachon University, 2012–2016
