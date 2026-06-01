@@ -56,6 +56,7 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 const pubItems = document.querySelectorAll('.pub-item');
 const hdToggle = document.querySelector('.pub-group-toggle');
 const hdPanel = document.getElementById('pub-group-hd');
+const hdGroup = document.querySelector('.pub-group');
 
 function setHdPanelOpen(open) {
   if (!hdPanel || !hdToggle) return;
@@ -79,9 +80,14 @@ function applyPubFilter(filter) {
   });
 
   if (filter === 'all') {
+    if (hdGroup) hdGroup.classList.remove('pub-group-hidden');
     setHdPanelOpen(false);
   } else if (hdHasMatch) {
+    if (hdGroup) hdGroup.classList.remove('pub-group-hidden');
     setHdPanelOpen(true);
+  } else {
+    if (hdGroup) hdGroup.classList.add('pub-group-hidden');
+    setHdPanelOpen(false);
   }
 }
 
