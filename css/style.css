@@ -417,6 +417,18 @@ section { padding-block: clamp(var(--space-12), 8vw, var(--space-24)); }
   min-width: 2.75rem;
   flex-shrink: 0;
 }
+.news-item-stacked { align-items: flex-start; }
+.news-item-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  min-width: 0;
+}
+.news-item-meta {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  line-height: var(--leading-snug);
+}
 .strip-tags {
   display: flex;
   flex-wrap: wrap;
