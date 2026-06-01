@@ -59,7 +59,7 @@ const hdPanel = document.getElementById('pub-group-hd');
 
 function setHdPanelOpen(open) {
   if (!hdPanel || !hdToggle) return;
-  hdPanel.hidden = !open;
+  hdPanel.classList.toggle('is-open', open);
   hdToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   hdToggle.classList.toggle('is-open', open);
 }
@@ -68,7 +68,7 @@ function applyPubFilter(filter) {
   let hdHasMatch = false;
 
   pubItems.forEach(item => {
-    const types = item.dataset.type.split(' ');
+    const types = (item.dataset.type || '').split(' ').filter(Boolean);
     const matches = filter === 'all' || types.includes(filter);
     if (filter === 'all') {
       item.style.display = '';
@@ -80,8 +80,8 @@ function applyPubFilter(filter) {
 
   if (filter === 'all') {
     setHdPanelOpen(false);
-  } else {
-    setHdPanelOpen(hdHasMatch);
+  } else if (hdHasMatch) {
+    setHdPanelOpen(true);
   }
 }
 
@@ -95,7 +95,7 @@ filterBtns.forEach(btn => {
 
 if (hdToggle && hdPanel) {
   hdToggle.addEventListener('click', () => {
-    setHdPanelOpen(hdPanel.hidden);
+    setHdPanelOpen(!hdPanel.classList.contains('is-open'));
   });
 }
 
