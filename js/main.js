@@ -60,10 +60,12 @@ filterBtns.forEach(btn => {
     btn.classList.add('active');
     const filter = btn.dataset.filter;
     pubItems.forEach(item => {
-      if (filter === 'all' || item.dataset.type === filter) {
+      const types = item.dataset.type.split(' ');
+      const matches = filter === 'all' || types.includes(filter);
+      if (filter === 'all') {
         item.style.display = '';
       } else {
-        item.style.display = 'none';
+        item.style.display = matches ? 'block' : 'none';
       }
     });
   });

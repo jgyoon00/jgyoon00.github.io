@@ -579,6 +579,7 @@ section { padding-block: clamp(var(--space-12), 8vw, var(--space-24)); }
   border-radius: var(--radius-sm);
 }
 .badge-fa { background: color-mix(in oklab, var(--color-accent) 12%, transparent); color: var(--color-accent); }
+.badge-cfa { background: color-mix(in oklab, var(--color-accent) 12%, transparent); color: var(--color-accent); }
 .badge-en { background: color-mix(in oklab, var(--color-sage) 12%, transparent); color: var(--color-sage); }
 .badge-ko { background: color-mix(in oklab, var(--color-primary) 10%, transparent); color: var(--color-primary); }
 .pub-title {
