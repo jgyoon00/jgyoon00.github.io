@@ -1,0 +1,11 @@
+Background text (removed from website About tab — kept for future reference)
+Source: index.html About section, archived 2026-06-01
+================================================================================
+
+I am a PhD candidate in Environmental Health Sciences at the University of Arizona's Mel & Enid Zuckerman College of Public Health, where I work in the Health & Urban Modeling Lab under Professor Chris C. Lim. I am expected to complete my PhD in 2027 and am on the market for postdoctoral positions beginning that year.
+
+My research sits at the intersection of environmental epidemiology, geospatial analysis, and health equity. I study how the places people live — defined by air quality, access to green space, and the resilience of surrounding infrastructure — shape cancer outcomes and health disparities across the United States.
+
+I hold a Master of Science in Humanities and Social Medicine from Gachon University (South Korea), where I studied phthalate exposures and physical function in Korean elderly populations, and a Bachelor of Engineering in Biomedical Engineering, also from Gachon University.
+
+Before joining the University of Arizona, I worked as a researcher and field interviewer on the national investigation of Humidifier Disinfectant-Associated Lung Injury in South Korea — one of the largest environmental health incidents in Korean history. That work shaped my commitment to understanding how environmental exposures harm vulnerable populations.

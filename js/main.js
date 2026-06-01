@@ -82,7 +82,7 @@ if (showMoreBtn) {
 /* ── Tab Navigation ──────────────────────────────────────────── */
 const tabLinks  = document.querySelectorAll('[data-tab]');
 const tabPanels = document.querySelectorAll('.tab-panel');
-const VALID_TABS = ['home', 'research', 'publications', 'about', 'contact'];
+const VALID_TABS = ['home', 'research', 'publications', 'contact'];
 
 function switchTab(tabId) {
   if (!VALID_TABS.includes(tabId)) tabId = 'home';
