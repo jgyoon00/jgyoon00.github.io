@@ -361,14 +361,22 @@ section { padding-block: clamp(var(--space-12), 8vw, var(--space-24)); }
   .hero-social { justify-content: center; }
 }
 
-/* ── Home Strips (Recent, Education, …) ───────────────────────── */
-.home-strips {
+/* ── News Strip ───────────────────────────────────────────────── */
+.tab-panel.active#tab-home {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100dvh - var(--nav-height));
+}
+.tab-panel.active#tab-home .news-strip {
+  flex: 1;
+}
+.news-strip {
   background: var(--color-surface);
   border-top: 1px solid var(--color-divider);
   border-bottom: 1px solid var(--color-divider);
-  padding-block: var(--space-5);
+  padding-block: var(--space-4);
 }
-.home-strips-inner {
+.news-strip-stack {
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
@@ -383,6 +391,7 @@ section { padding-block: clamp(var(--space-12), 8vw, var(--space-24)); }
   padding-top: var(--space-5);
   border-top: 1px solid var(--color-divider);
 }
+.news-inner { display: flex; align-items: flex-start; gap: var(--space-8); flex-wrap: wrap; }
 .news-label {
   font-size: var(--text-xs);
   font-weight: 700;
