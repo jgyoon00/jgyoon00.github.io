@@ -574,11 +574,13 @@ section { padding-block: clamp(var(--space-12), 8vw, var(--space-24)); }
   font-variant-numeric: tabular-nums;
 }
 .pub-badge {
-  font-size: 0.625rem;
+  display: inline-block;
+  font-size: 0.6875rem;
   font-weight: 600;
-  padding: 1px 0.4rem;
-  border-radius: var(--radius-full, 9999px);
-  line-height: 1.5;
+  padding: 1px 0.375rem;
+  border-radius: var(--radius-sm);
+  line-height: 1.45;
+  border: none;
 }
 .badge-fa { background: color-mix(in oklab, var(--color-accent) 12%, transparent); color: var(--color-accent); }
 .badge-cfa { background: color-mix(in oklab, var(--color-accent) 12%, transparent); color: var(--color-accent); }
