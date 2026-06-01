@@ -442,6 +442,7 @@ section { padding-block: clamp(var(--space-12), 8vw, var(--space-24)); }
 .pillar-card:nth-child(1)::before { background: var(--color-accent); }
 .pillar-card:nth-child(2)::before { background: var(--color-sage); }
 .pillar-card:nth-child(3)::before { background: var(--color-primary); }
+.pillar-card:nth-child(4)::before { background: color-mix(in oklab, var(--color-sage) 55%, var(--color-primary)); }
 .pillar-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: color-mix(in oklab, var(--color-primary) 30%, var(--color-border)); }
 .pillar-card h3 {
   font-family: var(--font-display);
