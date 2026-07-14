@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "entries": {
+    "459c54e5f35d6a58dcd90d2aecc21fa6d1f35d241bc5b134c506f87dc7b6d67b": {
+      "last_emitted_at_ms": 1784066215518,
+      "message": "Combine searches in parallel when investigating multiple patterns."
+    },
+    "445ed27a3872b681d98190bae61ccb84954e1bc4e140df5370be958dee776b3a": {
+      "last_emitted_at_ms": 1784066198727,
+      "message": "Verify changes work after editing. Test functionality before marking complete."
+    },
+    "79a93d4a2f8f50b95f852280616242fee1855dc99a3c75211917f55e72e95fae": {
+      "last_emitted_at_ms": 1784066180150,
+      "message": "Use parallel execution for independent tasks. Use run_in_background for long operations (npm install, builds, tests)."
+    },
+    "466399dafa2d20f60587180bad0a07358eb7f2bce724df0ff682f038ad33f5ad": {
+      "last_emitted_at_ms": 1784066178065,
+      "message": "Read multiple files in parallel when possible for faster analysis."
+    },
+    "0d1686dd782d642ae20644295dfad9ff5e1973c777f596b5824853013239b2c6": {
+      "last_emitted_at_ms": 1784066175861,
+      "message": "Spawning agent: oh-my-claudecode:code-reviewer (inherit) [BACKGROUND] | Task: Accessibility and readability audit"
+    },
+    "d68980c68a3469915edba469a2bb043513dc6ef59e92fd984de25d92be847363": {
+      "last_emitted_at_ms": 1784066168216,
+      "message": "Spawning agent: oh-my-claudecode:code-reviewer (inherit) [BACKGROUND] | Task: Design consistency review"
+    }
+  },
+  "updated_at": "2026-07-14T21:56:55.518Z"
+}
